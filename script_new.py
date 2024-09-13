@@ -107,7 +107,7 @@ posts = search_reddit_mentions(query, total_limit=total_post_limit)
 
 # Convert to dataframe and save as CSV
 df = pd.DataFrame(posts)
-csv_filename = f"sentiment_analysis_{len(posts)}_new.csv"
+csv_filename = f"sentiment_analysis.csv"
 df.to_csv(csv_filename, index=False)
 
 print(f"Data saved to {csv_filename}")
