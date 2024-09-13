@@ -17,7 +17,7 @@ data_into_long <- function(x) {
 }
 
 # Data
-data_long <- read_csv("sentiment_analysis_973.csv") %>%
+data_long <- read_csv("sentiment_analysis.csv") %>%
   mutate(each_df = map(discipline_faculty, data_into_long)) %>%
   unnest(each_df) %>%
   select(-3)
